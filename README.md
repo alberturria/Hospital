@@ -1,10 +1,8 @@
+[![Build Status](https://travis-ci.org/alberturria/Hospital.svg?branch=master)](https://travis-ci.org/alberturria/Hospital)
+
 Para ver la página del repositorio pulsar [aquí](https://alberturria.github.io/Hospital/).
 
-
-
-
-
-# SERVICIO WEB PARA UN CENTRO DE SALUD [build status](https://travis-ci.org/alberturria/Hospital.svg?branch=master)
+# SERVICIO WEB PARA UN CENTRO DE SALUD 
 
 ## Descripción
 
