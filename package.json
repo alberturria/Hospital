@@ -1,0 +1,29 @@
+{
+  "name": "hospital",
+  "version": "1.0.0",
+  "description": "Web service to manage the medical appointments in hospitals ",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alberturria/Hospital.git"
+  },
+  "author": "Alberto Herrera",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/alberturria/Hospital/issues"
+  },
+  "homepage": "https://github.com/alberturria/Hospital#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "chai":"*"
+  }
+}
