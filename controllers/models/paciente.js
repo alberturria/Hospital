@@ -3,9 +3,7 @@ class Paciente{
     {
         this.nombre = nombre;
         this.apellido =  apellido;
-        this.DNI = DNI;
-        console.log("Se ha creado un nuevo Paciente");
-        
+        this.DNI = DNI;        
     }
 
     setNombre(nombre)
