@@ -5,9 +5,7 @@ class Cita{
         this.doctor =  doctor;
         this.date = date;
         this.hora = hora;
-        this.sala = sala
-        console.log("Se ha creado una nueva Cita");
-        
+        this.sala = sala        
     }
 
     setPaciente(paciente)

@@ -4,9 +4,7 @@ class Doctor{
         this.nombre = nombre;
         this.apellido =  apellido;
         this.DNI = DNI;
-        this.especialidad = especialidad;
-        console.log("Se ha creado un nuevo Doctor");
-        
+        this.especialidad = especialidad;        
     }
 
     setNombre(nombre)
