@@ -3,7 +3,8 @@ Para ver la página del repositorio pulsar [aquí](https://alberturria.github.io
 
 
 
-# SERVICIO WEB PARA UN CENTRO DE SALUD
+
+# SERVICIO WEB PARA UN CENTRO DE SALUD [build status](https://travis-ci.org/alberturria/Hospital.svg?branch=master)
 
 ## Descripción
 
