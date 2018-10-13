@@ -1,7 +1,7 @@
-Para ver la página del repositorio pulsar [aquí](https://alberturria.github.io/Hospital/).
-
-
-
+---
+title: Hospital IV
+repository: https://github.com/alberturria/Hospital
+---
 
 # SERVICIO WEB PARA UN CENTRO DE SALUD
 
@@ -21,7 +21,6 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 - La integración continua se realizará gracias a Travis-CI
 - El entorno se virtualizará gracias al gestor de módulos para Node.js, NPM.
 - La base de datos será una NoSQL debido a la integración del framework con la misma.
-
 
 ## Licencia
 
