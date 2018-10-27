@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Web service to manage the medical appointments in hospitals ",
   "main": "index.js",
+  "engines": {
+    "node": "8.10.0"
+  },
   "directories": {
     "doc": "docs"
   },
