@@ -1,7 +1,6 @@
 const paciente = require('./controllers/models/paciente')
 const doctor = require('./controllers/models/doctor')
 const cita = require('./controllers/models/cita')
-const resultado = require('./result.json')
 var express = require('express');
 var app = express();
 
