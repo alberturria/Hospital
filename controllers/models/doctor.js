@@ -1,3 +1,29 @@
+/*
+Clase Doctor:
+    Clase que modela los Doctores que tendrán los pacientes asignados en cada Cita.
+    
+    Cada Doctor vendrá definida por:
+    -Nombre: Nombre del Doctor.
+    -Apellido: Apellidos del Doctor.
+    -DNI: DNI del Doctor.
+    -Especialidad: Formación en la que está especializado el Doctor (Ej. Traumatología, pediatría, etc.)
+    
+    Métodos:
+    -Constructor: Crea un nuevo Doctor.
+
+    -SetNombre: Asigna un nuevo nombre al Doctor
+    -SetApellido: Asigna unos nuevos apellidos al Doctor.
+    -SetDNI: Asigna un nuevo DNI al Doctor
+    -SetEspecialidad: Asigna una nueva esoecialidad al Doctor.
+
+    -GetNombre: Devuelve el nombre del Doctor.
+    -GetApellido: Devuelve los apellidos del Doctor.
+    -GetDNI: Devuelve el DNI del Doctor.
+    -GetEspecialidad: Devuelve la especialidad del Doctor.
+    
+    -toString: Devuelve toda la información del Doctor en forma de string.
+
+*/
 class Doctor{
     constructor(nombre, apellido, DNI, especialidad)
     {

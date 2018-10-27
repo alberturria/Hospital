@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/alberturria/Hospital.svg?branch=master)](https://travis-ci.org/alberturria/Hospital)
+ [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Para ver la página del repositorio pulsar [aquí](https://alberturria.github.io/Hospital/).
 
@@ -15,7 +16,7 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 ## Herramientas (Provisionales)
 
 - El lenguaje utilizado será Node.js, puesto que estoy familiarizado con él.
-- El framework a usar será Express.js, ya que nos ofrece diversas funcionalidades como soporte para API restfull, websockets,... Además es idóneo debido al lenguaje utilizado.
+- El framework a usar será Express.js, ya que nos ofrece diversas funcionalidades como soporte para API restfull, websockets, etc. Además es idóneo debido al lenguaje utilizado.
 - El testeo se realizará con Mocha y Chai
 - La integración continua se realizará gracias a Travis-CI
 - El entorno se virtualizará gracias al gestor de módulos para Node.js, NPM.

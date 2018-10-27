@@ -5,7 +5,7 @@ var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-
+// Test de los pacientes
 describe('Paciente', function(){
         // Testea que se haya cargado bien la librería
         describe('Carga', function(){
@@ -14,7 +14,9 @@ describe('Paciente', function(){
         });
     });
 
-
+    // Comprueba que el constructor funciona correctamente,
+    // para ello hacemos una afirmación con el resultado esperado 
+    // a la hora de pasar a String el nuevo paciente creado.
     describe('Constructor', () => {
       it('it should create a new patient',function()
       {
@@ -24,6 +26,9 @@ describe('Paciente', function(){
 
     });
 
+    // Comprueba que el método toString
+    // para ello hacemos una afirmación con el resultado esperado 
+    // a la hora de pasar a String el nuevo paciente creado.
     describe('toString', () => {
         it('it should return the correct string',function()
         {
@@ -32,11 +37,40 @@ describe('Paciente', function(){
             assert.equal(nuevopaciente.toString(), "Alberto Herrera 121212","Creado");
         });
   
-      });
+    });
+
+    // Comprueba que el método setNombre
+    // para ello hacemos una afirmación esperando el resultado
+    // del nuevo nombre (cambiado). 
+    describe('setNombre', () => {
+        it('it should return the correct modified name string',function()
+        {
+            var nuevopaciente= new paciente("Alberto", "Herrera", 121212) ;
+            nuevopaciente.setNombre("Francisco")
+            nuevopaciente.toString();
+            assert.equal(nuevopaciente.toString(), "Francisco Herrera 121212","Creado");
+        });
+  
+    });
+
+    
+    // Comprueba que el método getNombre
+    // para ello hacemos una afirmación esperando el resultado
+    // del nuevo nombre.
+    
+    describe('getNombre', () => {
+        it('it should return the correct original name string',function()
+        {
+            var nuevopaciente= new paciente("Alberto", "Herrera", 121212) ;
+            nuevopaciente.toString();
+            assert.equal(nuevopaciente.getNombre(), "Alberto","Creado");
+        });
+  
+    });
 
 });
 
-
+// Test de los doctores
 describe('Doctor', function(){
     // Testea que se haya cargado bien la librería
     describe('Carga', function(){
@@ -45,7 +79,9 @@ describe('Doctor', function(){
     });
 });
 
-
+// Comprueba que el constructor funciona correctamente,
+// para ello hacemos una afirmación con el resultado esperado 
+// a la hora de pasar a String el nuevo paciente creado.
 describe('Constructor', () => {
   it('it should create a new doctor',function()
   {
@@ -54,7 +90,9 @@ describe('Constructor', () => {
     });
 
 });
-
+// Comprueba que el método toString
+// para ello hacemos una afirmación con el resultado esperado 
+// a la hora de pasar a String el nuevo doctor creado.
 describe('toString', () => {
     it('it should return the correct string',function()
     {
@@ -68,6 +106,7 @@ describe('toString', () => {
 });
 
 
+// Test de las citas
 describe('Cita', function(){
     // Testea que se haya cargado bien la librería
     describe('Carga', function(){
@@ -76,7 +115,9 @@ describe('Cita', function(){
     });
 });
 
-
+// Comprueba que el constructor funciona correctamente,
+// para ello hacemos una afirmación con el resultado esperado 
+// a la hora de pasar a String la nueva cita creada.
 describe('Constructor', () => {
   it('it should create a new cita',function()
   {
@@ -88,6 +129,9 @@ describe('Constructor', () => {
 
 });
 
+// Comprueba que el método toString
+// para ello hacemos una afirmación con el resultado esperado 
+// a la hora de pasar a String la nueva cita creada.
 describe('toString', () => {
     it('it should return the correct string',function()
     {
