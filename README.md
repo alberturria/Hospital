@@ -38,6 +38,8 @@ Dicho despliegue lo puedes encontrar en [este link](https://hospitaliv.herokuapp
 
 Al estar conectado el método de despliegue con este repositorio de Github, cada vez que realicemos un push a la rama master del mismo, nos aseguramos que se aplican los cambios realizados en Heroku (Ahorrandonos de esta manera tener que realizar un `git push heroku master` cada vez que se quiera desplegar un cambio nuevo en dicha plataforma).
 
+Además, al haberlo conectado con Travis-CI, los despliegues automáticos generan una nueva versión de la aplicación cada vez que se realiza un `push` a la rama `master`.
+
 El archivo que declara qué comando se debe ejecutar para iniciar la app es el archivo [Procfile](https://github.com/alberturria/Hospital/blob/master/Procfile).
 
 Para comprobar el funcionamiento correcto del PaaS se puede o bien ver el link en el que se despliega la aplicación.
