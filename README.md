@@ -24,6 +24,26 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 - La base de datos será una NoSQL debido a la integración del framework con la misma.
 
 
+## Tests
+
+Los tests en este proyecto se llevan a cabo gracias al framework Mocha y a la librería Chai.
+El documento de tests se encuentra en la ruta [./test/test.js](https://github.com/alberturria/Hospital/blob/master/test/test.js).
+Para ejecutar los tests, una vez clonado el repositorio será necesario ejecutar `npm test`. 
+El uso de Travis-CI nos permite mantener una integración continua lanzando los tests cada vez que se realice un push a la rama master de este repositorio.
+
+## Despliegue
+
+Se ha empleado Heroku como PaaS para el despliegue de nuestro servicio web.
+Dicho despliegue lo puedes encontrar en [este link](https://hospitaliv.herokuapp.com/)
+
+Al estar conectado el método de despliegue con este repositorio de Github, cada vez que realicemos un push a la rama master del mismo, nos aseguramos que se aplican los cambios realizados en Heroku (Ahorrandonos de esta manera tener que realizar un `git push heroku master` cada vez que se quiera desplegar un cambio nuevo en dicha plataforma).
+
+El archivo que declara qué comando se debe ejecutar para iniciar la app es el archivo [Procfile](https://github.com/alberturria/Hospital/blob/master/Procfile).
+
+Para comprobar el funcionamiento correcto del PaaS se puede o bien ver el link en el que se despliega la aplicación.
+Para comprobar de manera local el funcionamiento del Paas se ha ejecutado el comando `heroku local web`.
+El comando `heroku open` le abre el servicio ya desplegado en su navegador web predeterminado.
+
 
 ## Clases
 
