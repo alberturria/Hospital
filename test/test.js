@@ -194,7 +194,7 @@ describe('GET method tests', () => {
 describe('PUT method tests', () => {
 
     //Comprueba que efectivamente se devuelven los pacientes en /pacientes
-    describe('GET /pacientes', () => {
+    describe('PUT /pacientes', () => {
         it('should put a new predefined user', (done) => {
         supertest(app)
             .put('/pacientes')
@@ -207,4 +207,5 @@ describe('PUT method tests', () => {
 });
 
 
-  
+
+

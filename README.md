@@ -29,7 +29,7 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 
 Los tests en este proyecto se llevan a cabo gracias al framework Mocha y a la librería Chai.
 El documento de tests se encuentra en la ruta [./test/test.js](https://github.com/alberturria/Hospital/blob/master/test/test.js).
-Para ejecutar los tests, una vez clonado el repositorio será necesario ejecutar `npm test`. 
+Para ejecutar los tests, una vez clonado el repositorio será necesario ejecutar `npm test`. (Este a su vez ejecutará `mocha --exit` para ponerle fin a los tests).
 El uso de Travis-CI nos permite mantener una integración continua lanzando los tests cada vez que se realice un push a la rama master de este repositorio.
 
 ## Despliegue

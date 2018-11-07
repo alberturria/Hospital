@@ -10,7 +10,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --exit",
     "start": "node index.js"
   },
   "repository": {
