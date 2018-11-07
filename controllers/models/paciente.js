@@ -1,3 +1,7 @@
+const fs = require('fs');
+var pruebas = require('./../../data/pruebas.json');
+var pacientes = require('./../../data/pacientes.json');
+
 /*
 Clase Paciente:
     Clase que modela los Pacientes que tendrán la cita con los doctores.
@@ -63,6 +67,13 @@ class Paciente{
     toString()
     {
         return(this.getNombre()+" "+this.getApellido()+" "+this.getDNI());
+    }
+
+    aniadirADBLocal()
+    {
+        var data = pacientes;        
+        data.push(this);
+        fs.writeFileSync('./data/pacientes.json',JSON.stringify(data, null, 2));
     }
 
 }

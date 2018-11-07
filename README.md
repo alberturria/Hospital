@@ -18,9 +18,10 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 
 - El lenguaje utilizado será Node.js, puesto que estoy familiarizado con él.
 - El framework a usar será Express.js, ya que nos ofrece diversas funcionalidades como soporte para API restfull, websockets, etc. Además es idóneo debido al lenguaje utilizado.
-- El testeo se realizará con Mocha y Chai
+- El testeo se realizará con Mocha, Chai y Supertest
 - La integración continua se realizará gracias a Travis-CI
 - El entorno se virtualizará gracias al gestor de módulos para Node.js, NPM.
+- El despliegue se ha realizado gracias a Heroku. Para saber más entra [aquí]().
 - La base de datos será una NoSQL debido a la integración del framework con la misma.
 
 
@@ -69,6 +70,8 @@ El comando `heroku open` le abre el servicio ya desplegado en su navegador web p
     -GetDNI: Devuelve el DNI del Paciente.
     
     -toString: Devuelve toda la información del Paciente en forma de string.
+    -aniadirADBLocal(): Añade un paciente a la base de datos local.
+
 
 
 

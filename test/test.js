@@ -2,6 +2,9 @@ const paciente = require('./../controllers/models/paciente')
 const doctor = require('./../controllers/models/doctor')
 const cita = require('./../controllers/models/cita')
 var assert = require('assert');
+var supertest = require('supertest');
+var app = require('../index.js');
+var chai = require('chai');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
@@ -146,3 +149,62 @@ describe('toString', () => {
 
 });
 
+//  SUPERTEST
+//  GET 
+describe('GET method tests', () => {
+
+    //Comprueba que efectivamente se devuelven los pacientes en /pacientes
+    describe('GET /pacientes', () => {
+        it('should get all the patients', (done) => {
+        supertest(app)
+            .get('/pacientes')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+    //Comprueba que efectivamente se devuelven los doctores en /doctores
+    describe('GET /doctores', () => {
+        it('should get all the doctors', (done) => {
+        supertest(app)
+            .get('/doctores')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+    //Comprueba que efectivamente se devuelven los citas en /citas
+    describe('GET /citas', () => {
+        it('should get all the dates', (done) => {
+        supertest(app)
+            .get('/citas')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+
+
+});
+
+
+describe('PUT method tests', () => {
+
+    //Comprueba que efectivamente se devuelven los pacientes en /pacientes
+    describe('GET /pacientes', () => {
+        it('should put a new predefined user', (done) => {
+        supertest(app)
+            .put('/pacientes')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+});
+
+
+  

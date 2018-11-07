@@ -132,6 +132,14 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 - Comprueba que el método toString para ello hacemos una afirmación con el resultado esperado a la hora de pasar a String la nueva cita creada.
 
 
+### Test de los GET
+
+En este caso se comprueba que en todos los métodos GET, lo que se obtiene, es como cabe esperar, archivos JSON y un status 200.
+
+## Test de los PUT
+
+En este caso se comprueba que en el método PUT, lo que se obtiene, es como cabe esperar, un archivo JSON y un status 200.
+
 
 
 ## Licencia
