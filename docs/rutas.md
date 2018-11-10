@@ -28,4 +28,4 @@ De cada doctor se podrá saber su nombre, su apellido, su DNI y su especialidad.
 En esta ruta se podrá ver cuáles son las citas de las que se tiene constancia en la base de datos.
 De cada cita se podrá saber el DNI del paciente que se atiende, el DNI del doctor que realiza la consulta, la fecha, la hora y la sala donde tendrá lugar la cita.
 
-![Ruta /citas](/docs/assets/img/citas.png)
+![Ruta /citas](/assets/img/citas.png)
