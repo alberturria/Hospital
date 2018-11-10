@@ -25,7 +25,7 @@ Además, al haberlo conectado con Travis-CI, los despliegues automáticos genera
 
 El uso de este documento nos permitirá declarar explícitamente qué comando se deberá usar para iniciar la aplicación.
 Este comando será ejecutado por el dyno de nuestra aplicación.
-![](/assets/img/dyno.png)
+![Imagen dyno](/assets/img/dyno.png)
 
 
 El Procfile de nuestra aplicación tendr'el siguiente aspecto:
