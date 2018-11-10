@@ -2,6 +2,11 @@
 title: Hospital IV
 repository: https://github.com/alberturria/Hospital
 ---
+[![Build Status](https://travis-ci.org/alberturria/Hospital.svg?branch=master)](https://travis-ci.org/alberturria/Hospital)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 
 # SERVICIO WEB PARA UN CENTRO DE SALUD
 
@@ -20,6 +25,7 @@ La idea inicial de este proyecto es centrarnos en la automatización de la notif
 - El testeo se realizará con Mocha y Chai
 - La integración continua se realizará gracias a Travis-CI
 - El entorno se virtualizará gracias al gestor de módulos para Node.js, NPM.
+- El despliegue se ha realizado gracias a Heroku. Para saber más entra [aquí](despliegue.md).
 - La base de datos será una NoSQL debido a la integración del framework con la misma.
 
 
@@ -143,7 +149,12 @@ En este caso se comprueba que en el método PUT, lo que se obtiene, es como cabe
 
 ## Rutas del Servicio Web
 
-En [esta página](rutas.md) podrás encontrar información de las diferentes rutas del servicio web .
+En [esta página](rutas.md) podrás encontrar información de las diferentes rutas del servicio web.
+
+
+## Despliegue del Servicio Web
+
+En [esta página](despliegue.md) podrás encontrar información sobre cómo se ha desplegado nuestro servicio.
 
 
 ## Licencia
