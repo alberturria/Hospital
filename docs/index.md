@@ -141,6 +141,10 @@ En este caso se comprueba que en todos los métodos GET, lo que se obtiene, es c
 En este caso se comprueba que en el método PUT, lo que se obtiene, es como cabe esperar, un archivo JSON y un status 200.
 
 
+## Rutas del Servicio Web
+
+En [esta página](/docs/rutas.md) podrás encontrar información de las diferentes rutas del servicio web .
+
 
 ## Licencia
 
