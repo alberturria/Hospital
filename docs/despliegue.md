@@ -20,3 +20,16 @@ Al estar conectado el método de despliegue con este repositorio de Github, cada
 Además, al haberlo conectado con Travis-CI, los despliegues automáticos generan una nueva versión de la aplicación cada vez que se realiza un `push` a la rama `master`.
 
 
+
+## Procfile
+
+El uso de este documento nos permitirá declarar explícitamente qué comando se deberá usar para iniciar la aplicación.
+Este comando será ejecutado por el dyno de nuestra aplicación.
+![](/assets/img/dyno.png)
+
+
+El Procfile de nuestra aplicación tendr'el siguiente aspecto:
+`web: node index.js`
+Aquí se pueden diferenciar dos partes:
+- web: Se trata del tipo de proceso que se lanzará. Hace saber a Heroku que la aplicación recibirá tráfico web cuando se implemente.
+- node index.js: Se trata del comando que ejecutamos para lanzar nuestra apliación. Al estar utilizando Node.js éste es nuestro comando, pero cambiará dependiendo del entorno que se utilice.
