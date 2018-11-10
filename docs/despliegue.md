@@ -28,7 +28,7 @@ Este comando será ejecutado por el dyno de nuestra aplicación.
 ![Imagen dyno](/assets/img/dyno.png)
 
 
-El Procfile de nuestra aplicación tendr'el siguiente aspecto:
+El Procfile de nuestra aplicación tendrá el siguiente aspecto:
 `web: node index.js`
 Aquí se pueden diferenciar dos partes:
 - web: Se trata del tipo de proceso que se lanzará. Hace saber a Heroku que la aplicación recibirá tráfico web cuando se implemente.
