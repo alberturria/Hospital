@@ -1,14 +1,14 @@
 [
     {
     "nombre":"Fernando",
-    "apellido":"García Torres",
+    "apellido":"Alonso Torres",
     "DNI":"2345444",
-    "especialidad":"Traumatología"
+    "especialidad":"Traumatologia"
 },
 {
-    "nombre":"Cristóbal",
-    "apellido":"Gómez Espósito",
+    "nombre":"Cristobal",
+    "apellido":"Gomez Esposito",
     "DNI":"35645645",
-    "especialidad":"Oncología"
+    "especialidad":"Oncologia"
 }
 ]
