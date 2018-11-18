@@ -20,6 +20,14 @@ Al estar conectado el método de despliegue con este repositorio de Github, cada
 Además, al haberlo conectado con Travis-CI, los despliegues automáticos generan una nueva versión de la aplicación cada vez que se realiza un `push` a la rama `master`.
 
 
+En el hito 4 hemos desplegado el servicio web desde un contenedor, aquí se puede ver el despliegue:
+
+Contenedor: https://docker-hospital.herokuapp.com/status
+
+La imagen que se ha usado ha sido la siguiente:
+
+DockerHub: https://hub.docker.com/r/alberturria/hospital/
+
 
 ## Procfile
 
