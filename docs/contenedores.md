@@ -3,6 +3,8 @@
 El servicio desplegado desde un contenedor lo podemos ver [aquí](https://docker-hospital.herokuapp.com/status)
 ![Contenido del servicio desplegado en ](/assets/img/urlcontenedor.png)
 
+Se ha seguido [esta guía](https://thejackalofjavascript.com/deploying-a-node-js-docker-container-to-heroku/)
+
 En el hito 4 de la asignatura hemos comenzado a usar contenedores Docker para el despliegue de nuestra asignatura.
 De esta forma podremos facilitar el despliegue de nuestro servicio web en cualquier Iaas que permita el despliegue de dichos contenedores.
 
