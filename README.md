@@ -56,7 +56,7 @@ La imagen que se ha usado ha sido la siguiente:
 
 DockerHub: https://hub.docker.com/r/alberturria/hospital/
 
-Para más información sobre contenedores vaya a [esta página](/docs/contenedores.md)
+Para más información sobre contenedores vaya a [esta página](https://alberturria.github.io/Hospital/contenedores.html)
 
 
 
