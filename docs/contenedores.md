@@ -13,10 +13,10 @@ Estos son los pasos que he seguido para dockerizar nuestra aplicación:
 2. Preparar Docker para poder usarlo desde el terminal.
 3. Crear nuestros ficheros Dockerfile y .dockerignore.
     
-    ### Dockerfile
+## Dockerfile
 
-    Fichero en el que se escriben las instrucciones necesarias por un usuario para crear una imagen.
-    Contenido de nuestro Dockerfile:
+Fichero en el que se escriben las instrucciones necesarias por un usuario para crear una imagen.
+Contenido de nuestro Dockerfile:
 
     
 ```
@@ -39,10 +39,12 @@ EXPOSE $PORT
 # Lanzar la aplicación
 CMD [ "npm", "start" ]
 ```
-    ### .dockerignore
 
-    Fichero que evitará que sus módulos locales y registros de depuración se copien en su imagen de Docker y posiblemente sobrescriba los módulos instalados dentro de su imagen.
-    Contenido de nuestro .dockerignore:
+## .dockerignore
+
+Fichero que evitará que sus módulos locales y registros de depuración se copien en su imagen de Docker y posiblemente sobrescriba los módulos instalados dentro de su imagen.
+Contenido de nuestro .dockerignore:
+
 
 
 ```
@@ -65,5 +67,6 @@ npm-debug.log
 Se trata de un servicio de registro basado en la nube que permite crear imágenes, así como enlazar con repositorios de código.
 Aprovechando esto, nosotros hemos creado un repositorio en DockerHub que está enlazado a nuestro repositorio de Github. 
 De esta manera cada vez que se realice un push a la rama master del repositorio de Github, se creará una nueva imagen en DockerHub.
+[Link al repositorio de DockerHub](https://hub.docker.com/r/alberturria/hospital/)
 
 ![Repositorio DockerHub](/assets/img/dockerhub.png)
