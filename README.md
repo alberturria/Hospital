@@ -48,7 +48,7 @@ Para comprobar de manera local el funcionamiento del Paas se ha ejecutado el com
 El comando `heroku open` le abre el servicio ya desplegado en su navegador web predeterminado.
 
 
-En el hito 4 hemos desplegado el servicio web desde un contenedor, aquí se puede ver el despliegue:
+Ahora nuestro servicio web también se puede desplegar desde un contenedor, aquí se puede ver el despliegue:
 
 Contenedor: https://docker-hospital.herokuapp.com/status
 
