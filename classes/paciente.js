@@ -1,6 +1,6 @@
 const fs = require('fs');
-var pruebas = require('./../../data/pruebas.json');
-var pacientes = require('./../../data/pacientes.json');
+var pruebas = require('./../data/pruebas.json');
+var pacientes = require('./../data/pacientes.json');
 
 /*
 Clase Paciente:
