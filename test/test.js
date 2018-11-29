@@ -1,12 +1,13 @@
-const paciente = require('./../controllers/models/paciente')
-const doctor = require('./../controllers/models/doctor')
-const cita = require('./../controllers/models/cita')
+const paciente = require('./../classes/paciente')
+const doctor = require('./../classes/doctor')
+const cita = require('./../classes/cita')
 var assert = require('assert');
 var supertest = require('supertest');
 var app = require('../index.js');
 var chai = require('chai');
 var expect = require('chai').expect;
 var should = require('chai').should();
+var express = require('express');
 
 // Test de los pacientes
 describe('Paciente', function(){
@@ -191,20 +192,6 @@ describe('GET method tests', () => {
 });
 
 
-describe('PUT method tests', () => {
-
-    //Comprueba que efectivamente se devuelven los pacientes en /pacientes
-    describe('PUT /pacientes', () => {
-        it('should put a new predefined user', (done) => {
-        supertest(app)
-            .put('/pacientes')
-            .expect('Content-Type', /json/)
-            .expect(200, done)
-        });
-
-    });
-
-});
 
 
 

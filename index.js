@@ -1,9 +1,10 @@
-const paciente = require('./controllers/models/paciente')
-const doctor = require('./controllers/models/doctor')
-const cita = require('./controllers/models/cita')
-const citas = require('./data/citas.json');
-const doctores = require('./data/doctores.json');
-const pacientes = require('./data/pacientes.json');
+var cita = require('./routes/cita.route');
+var doctor = require('./routes/doctor.route');
+var paciente = require('./routes/paciente.route');
+const mongoose = require('mongoose');
+let dev_db_url = 'mongodb://alberturria:123456a@ds151554.mlab.com:51554/hospital';
+MongoClient = require('mongodb').MongoClient;
+const bodyParser = require('body-parser');
 var pruebas = require('./data/pruebas.json');
 var express = require('express');
 const fs = require('fs');
@@ -12,6 +13,12 @@ var app = express();
 
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use('/citas', cita);
+app.use('/doctores', doctor);
+app.use('/pacientes', paciente);
 
 app.get('/', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -22,6 +29,7 @@ app.get('/status', function (req, res) {
     res.json({"status": "OK"});
 })
 
+/*
 app.get('/citas', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.json(citas);
@@ -45,10 +53,18 @@ app.put('/pacientes', function (req, res) {
     res.json(pacientes);
 })
 
+*/
 
 app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'));
 });
+
+let mongoDB = process.env.MONGODB_URI || dev_db_url;
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 
   module.exports = app;
