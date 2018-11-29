@@ -5,10 +5,16 @@ MAINTAINER albertoherreravargas@gmail.com
 RUN mkdir -p /usr/src/app
 
 # Crear directorio de la aplicación
-WORKDIR /usr/src/app
-
+WORKDIR /app
 # Instalar dependencias
-COPY . .
+COPY package.json /app
+COPY /classes /app/classes
+COPY /controllers /app/controllers
+COPY /data /app/data
+COPY /models /app/models
+COPY /routes /app/routes
+COPY /test /app/test
+COPY index.js /app
 
 RUN npm install -g nodemon
 
