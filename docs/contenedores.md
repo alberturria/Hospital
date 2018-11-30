@@ -18,27 +18,39 @@ Estos son los pasos que he seguido para dockerizar nuestra aplicación:
 ## Dockerfile
 
 Fichero en el que se escriben las instrucciones necesarias por un usuario para crear una imagen.
+
+Podemos ver que como imagen base se ha utilizado node:8. Esto es debido a que nuestro servicio web está usando dicha versión durante su desarrollo, y de esta forma evitaremos conflictos. En caso de que se hubiera usado una imagen anterior, es posible que apareciesen problemas durante la instalación.
+
+Además podemos observar cómo finalmente tanto [Procfile](https://github.com/alberturria/Hospital/blob/master/Procfile) como [Dockerfile](https://github.com/alberturria/Hospital/blob/master/Dockerfile) ejecutan al final el mismo comando, `npm start`.
+
 Contenido de nuestro Dockerfile:
 
     
 ```
-# Versión 8 de Node.js
 FROM node:8
-# A quién culpar si nada funciona
+
 MAINTAINER albertoherreravargas@gmail.com
-# Crear un directorio de trabajo
+
 RUN mkdir -p /usr/src/app
-# Cambiar a directorio de trabajo
-WORKDIR /usr/src/app
-# Copiar contenido de la carpeta local a 'WORKDIR'
-COPY . .
-# Instalar nodemon de manera global
+
+# Crear directorio de la aplicación
+WORKDIR /app
+# Instalar dependencias
+COPY package.json /app
+COPY /classes /app/classes
+COPY /controllers /app/controllers
+COPY /data /app/data
+COPY /models /app/models
+COPY /routes /app/routes
+COPY /test /app/test
+COPY index.js /app
+
 RUN npm install -g nodemon
-# Instalar dependencias en package.json
+
 RUN npm install
-# Exponer el puerto desde el container, así el host puede acceder a la variable $PORT
+
 EXPOSE $PORT
-# Lanzar la aplicación
+
 CMD [ "npm", "start" ]
 ```
 
