@@ -79,8 +79,13 @@ npm-debug.log
 # DockerHub
 
 Se trata de un servicio de registro basado en la nube que permite crear imágenes, así como enlazar con repositorios de código.
-Aprovechando esto, nosotros hemos creado un repositorio en DockerHub que está enlazado a nuestro repositorio de Github. 
+Aprovechando esto, **nosotros hemos creado un repositorio en DockerHub que está enlazado a nuestro repositorio de Github.**
+
 De esta manera cada vez que se realice un push a la rama master del repositorio de Github, se creará una nueva imagen en DockerHub.
+
+Esto se ha podido hacer Clicando en la página web de [Dockerhub](https://hub.docker.com/)  en Create > Create Automated Build > Create Auto-Build Github
+
+
 [Link al repositorio de DockerHub](https://hub.docker.com/r/alberturria/hospital/)
 
 ![Repositorio DockerHub](/assets/img/dockerhub.png)
