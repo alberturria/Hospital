@@ -49,7 +49,7 @@ El comando `heroku open` le abre el servicio ya desplegado en su navegador web p
 
 Ahora nuestro servicio web también se puede desplegar desde un contenedor, aquí se puede ver el despliegue:
 
-Contenedor: https://docker-hospital.herokuapp.com/status
+Contenedor: https://docker-hospital.herokuapp.com
 
 La imagen que se ha usado ha sido la siguiente:
 
