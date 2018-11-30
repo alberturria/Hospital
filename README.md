@@ -14,15 +14,14 @@ como al personal sanitario, como al paciente de la gestión de los diversos proc
 La idea inicial de este proyecto es centrarnos en la automatización de la notificación de citas al paciente, proporcionándole información de interés sobre la misma.
 
 
-## Herramientas (Provisionales)
+## Herramientas
 
 - El lenguaje utilizado será Node.js, puesto que estoy familiarizado con él.
 - El framework a usar será Express.js, ya que nos ofrece diversas funcionalidades como soporte para API restfull, websockets, etc. Además es idóneo debido al lenguaje utilizado.
 - El testeo se realizará con Mocha, Chai y Supertest
-- La integración continua se realizará gracias a Travis-CI
-- El entorno se virtualizará gracias al gestor de módulos para Node.js, NPM.
-- El despliegue se ha realizado gracias a Heroku. Para saber más entra [aquí](/docs/despliegue.md).
-- La base de datos será una NoSQL debido a la integración del framework con la misma.
+- El despliegue se ha realizado gracias a Heroku. Para saber más entra [aquí](https://alberturria.github.io/Hospital/despliegue.html).
+- Se ha usado Docker para la creación de una imagen del servicio, para más información entra [aquí](https://alberturria.github.io/Hospital/contenedores.html)
+- La gestión de la base de datos se realizará con mongoose, ya que usamos MongoDB
 
 
 ## Tests

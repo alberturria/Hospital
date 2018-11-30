@@ -149,12 +149,12 @@ En este caso se comprueba que en el método PUT, lo que se obtiene, es como cabe
 
 ## Rutas del Servicio Web
 
-En [esta página](rutas.md) podrás encontrar información de las diferentes rutas del servicio web.
+En [esta página](https://alberturria.github.io/Hospital/rutas.html) podrás encontrar información de las diferentes rutas del servicio web.
 
 
 ## Despliegue del Servicio Web
 
-En [esta página](despliegue.md) podrás encontrar información sobre cómo se ha desplegado nuestro servicio.
+En [esta página](https://alberturria.github.io/Hospital/despliegue.html) podrás encontrar información sobre cómo se ha desplegado nuestro servicio.
 
 En [esta página](https://alberturria.github.io/Hospital/contenedores.html) podrás encontrar información relativa al uso de contenedores.
 
