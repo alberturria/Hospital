@@ -2,7 +2,7 @@ var cita = require('./routes/cita.route');
 var doctor = require('./routes/doctor.route');
 var paciente = require('./routes/paciente.route');
 const mongoose = require('mongoose');
-let dev_db_url = 'mongodb://alberturria:123456a@ds151554.mlab.com:51554/hospital';
+const dev_db_url_from_file = require('./DBkey');
 MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 var pruebas = require('./data/pruebas.json');
@@ -59,7 +59,7 @@ app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-let mongoDB = process.env.MONGODB_URI || dev_db_url;
+let mongoDB = process.env.MONGODB_URI || dev_db_url_from_file;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
