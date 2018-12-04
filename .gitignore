@@ -62,3 +62,6 @@ typings/
 
 #DBKey
 DBkey.js
+
+#Package-lock.json
+package-lock.json
