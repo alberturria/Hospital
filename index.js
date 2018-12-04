@@ -2,7 +2,7 @@ var cita = require('./routes/cita.route');
 var doctor = require('./routes/doctor.route');
 var paciente = require('./routes/paciente.route');
 const mongoose = require('mongoose');
-const dev_db_url_from_file = require('./DBkey');
+var CryptoJS = require("crypto-js");
 MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 var pruebas = require('./data/pruebas.json');
@@ -29,42 +29,24 @@ app.get('/status', function (req, res) {
     res.json({"status": "OK"});
 })
 
-/*
-app.get('/citas', function (req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(citas);
-})
 
-app.get('/doctores', function (req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(doctores);
-})
+var ciphertext = fs.readFileSync('dataencripted','utf8');
 
-app.get('/pacientes', function (req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(pacientes);
-})
-
-app.put('/pacientes', function (req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    var paciente_nuevo = new paciente("Usuario " + Math.floor((Math.random() * 100) + 1) ,"Apellidos",""+Math.floor((Math.random() * 100) + 1));
-    //fs.writeFileSync('./data/pruebas.json',JSON.stringify(paciente_nuevo, null, 2));
-    paciente_nuevo.aniadirADBLocal();
-    res.json(pacientes);
-})
-
-*/
 
 app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-let mongoDB = process.env.MONGODB_URI || dev_db_url_from_file;
+
+var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'SHA256');
+var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+ 
+
+let mongoDB = process.env.MONGODB_URI || plaintext;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-
-  module.exports = app;
+module.exports = app;
