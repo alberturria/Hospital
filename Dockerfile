@@ -15,7 +15,7 @@ COPY /models /app/models
 COPY /routes /app/routes
 COPY /test /app/test
 COPY index.js /app
-COPY DBkey.js /app
+COPY dataencripted /app
 
 
 RUN npm install -g nodemon
