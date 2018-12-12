@@ -11,7 +11,7 @@ const fs = require('fs');
 var app = express();
 
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 80));
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
@@ -42,10 +42,10 @@ var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'SHA256');
 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
  
 
-let mongoDB = process.env.MONGODB_URI || plaintext;
+var mongoDB = process.env.MONGODB_URI || plaintext;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
-let db = mongoose.connection;
+var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
