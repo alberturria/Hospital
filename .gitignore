@@ -65,3 +65,6 @@ DBkey.js
 
 #Package-lock.json
 package-lock.json
+
+#VagrantDirectory
+.vagrant
