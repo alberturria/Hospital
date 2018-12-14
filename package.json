@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "chai": "*",
+    "flightplan": "^0.6.19",
     "mocha": "^5.2.0",
     "supertest": "^3.3.0"
   }
