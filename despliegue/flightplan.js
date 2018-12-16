@@ -9,8 +9,9 @@ plan.target('staging', {
 plan.remote(function(remote) {
 
   remote.with('cd /opt/Hospital/', function() {
-    remote.exec('npm install');
+    remote.exec('sudo npm install --production');
     remote.exec('sudo forever start index.js');
   });
 
 });
+
