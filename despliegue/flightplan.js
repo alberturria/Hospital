@@ -7,15 +7,10 @@ plan.target('staging', {
 });
 
 plan.remote(function(remote) {
-  remote.log('Executing aplication');
 
   remote.with('cd /opt/Hospital/', function() {
     remote.exec('npm install');
     remote.exec('sudo forever start index.js');
   });
 
-});
-
-plan.local(function(local) {
-  local.log('Clean up');
 });
