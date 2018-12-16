@@ -20,21 +20,17 @@
           state: present
 
       - name: Clonar el repositorio
+        become: yes
         git: repo=https://github.com/alberturria/Hospital dest=/opt/Hospital/ clone=yes force=yes
 
-      - name: Actualizar node a la ultima version
-        command: npm install -g n latest
+      - name: Actualizar node a la ultima versión
         become: yes
+        command: sudo npm install -g n latest
 
-      - name: Establecer version estable
-        command: n stable
+      - name: Establecer versión estable
         become: yes
-
-      - name: Instalar las dependencias de la aplicación
-        become: yes
-        npm:
-          path: /opt/Hospital/ 
-
+        command: sudo n stable
+        
       - name: Instalar forever para poder lanzar la aplicación sin límites.
         npm: name=forever global=yes state=present
 
