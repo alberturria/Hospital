@@ -37,8 +37,8 @@ app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-if (fs.existsSync('clave')) {
-    var clave_fichero = fs.readFileSync('dataencripted','utf8');
+if (fs.existsSync('clave.txt')) {
+    var clave_fichero = fs.readFileSync('clave.txt','utf8');
 }
 
 

@@ -35,6 +35,7 @@
         npm: name=forever global=yes state=present
 
 
-      - fetch:
-        src: ~/Escritorio/IV/Hospital/clave
-        dest: /opt/Hospital/
+      - name: Copiar archivo de credenciales para conectar a la Base de Datos
+        copy:
+          src: /home/alberturria/Escritorio/IV/Hospital/clave.txt
+          dest: /opt/Hospital/
