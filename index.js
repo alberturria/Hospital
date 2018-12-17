@@ -11,7 +11,7 @@ const fs = require('fs');
 var app = express();
 
 
-app.set('port', (process.env.PORT || 80));
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
@@ -38,7 +38,11 @@ app.listen(app.get('port'), function() {
 });
 
 
-var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'SHA256');
+
+//'SHA256'
+console.log(process.env.CLAVE);
+
+var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), process.env.CLAVE);
 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
  
 
