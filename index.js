@@ -11,7 +11,7 @@ const fs = require('fs');
 var app = express();
 
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 80));
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
@@ -37,12 +37,15 @@ app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'));
 });
 
+if (fs.existsSync('clave')) {
+    var clave_fichero = fs.readFileSync('dataencripted','utf8');
+}
+
 
 
 //'SHA256'
-console.log(process.env.CLAVE);
 
-var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), process.env.CLAVE);
+var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), process.env.CLAVE || clave_fichero );
 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
  
 

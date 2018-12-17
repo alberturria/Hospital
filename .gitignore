@@ -68,3 +68,7 @@ package-lock.json
 
 #VagrantDirectory
 .vagrant
+
+
+#CLAVE
+clave

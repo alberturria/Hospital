@@ -34,3 +34,7 @@
       - name: Instalar forever para poder lanzar la aplicación sin límites.
         npm: name=forever global=yes state=present
 
+
+      - fetch:
+        src: ~/Escritorio/IV/Hospital/clave
+        dest: /opt/Hospital/
