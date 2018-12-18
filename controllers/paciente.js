@@ -40,8 +40,26 @@ exports.paciente_update = function (req, res, next) {
     });
 };
 
+exports.paciente_update_test = function (req, res, next) {
+
+    Paciente.findOneAndUpdate({nombre:'PRUEBA'},{$set:{apellido:'PRUEBA_UPDATE'}},function(err)
+    {
+        if (err) return next(err);
+        res.send('Updated successfully!');  
+    })
+
+};
+
+
 exports.paciente_deleted = function (req, res, next) {
-    Cita.findByIdAndRemove(req.params.id, function (err) {
+    Paciente.findByIdAndRemove(req.params.id, function (err) {
+        if (err) return next(err);
+        res.send('Deleted successfully!');
+    })
+};
+
+exports.paciente_test = function (req, res, next) {
+    Paciente.findOneAndRemove({nombre : 'PRUEBA'}, function (err) {
         if (err) return next(err);
         res.send('Deleted successfully!');
     })

@@ -15,7 +15,11 @@ router.get('/:id', paciente_controller.paciente_details);
 
 router.post('/:id', paciente_controller.paciente_update);
 
+router.post('', paciente_controller.paciente_update_test);
+
 router.delete('/:id', paciente_controller.paciente_deleted);
+
+router.delete('', paciente_controller.paciente_test);
 
 
 module.exports = router;
