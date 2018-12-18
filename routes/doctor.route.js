@@ -15,7 +15,11 @@ router.get('/:id', doctor_controller.doctor_details);
 
 router.post('/:id', doctor_controller.doctor_update);
 
+router.post('', doctor_controller.doctor_update_test);
+
 router.delete('/:id', doctor_controller.doctor_deleted);
+
+router.delete('', doctor_controller.doctor_test);
 
 
 module.exports = router;
