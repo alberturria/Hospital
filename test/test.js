@@ -165,6 +165,17 @@ describe('GET method tests', () => {
 
     });
 
+    //Comprueba que efectivamente se devuelve un paciente específico
+    describe('GET /pacientes:id', () => {
+        it('should get all the patients', (done) => {
+        supertest(app)
+            .get('/pacientes/5bffc120c4a6ef17e6a9a5cf')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
     //Comprueba que efectivamente se devuelven los doctores en /doctores
     describe('GET /doctores', () => {
         it('should get all the doctors', (done) => {
@@ -176,9 +187,20 @@ describe('GET method tests', () => {
 
     });
 
-    //Comprueba que efectivamente se devuelven los citas en /citas
+    //Comprueba que efectivamente se devuelve un doctor específico
+    describe('GET /doctores:id', () => {
+        it('should get all the doctors', (done) => {
+        supertest(app)
+            .get('/doctores/5bffbd7a32332d153c98217f')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+    //Comprueba que efectivamente se devuelve una cita específica
     describe('GET /citas', () => {
-        it('should get all the dates', (done) => {
+        it('should get a specific cita', (done) => {
         supertest(app)
             .get('/citas')
             .expect('Content-Type', /json/)
@@ -187,6 +209,225 @@ describe('GET method tests', () => {
 
     });
 
+    //Comprueba que efectivamente se devuelven los citas en /citas
+    describe('GET /citas:id', () => {
+        it('should get a specific cita', (done) => {
+        supertest(app)
+            .get('/citas/5bffc5c4c4a6ef17e6a9a5e2')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+
+
+    //Comprueba que efectivamente se devuelven los citas en /citas
+    describe('GET /citas:id/doctor', () => {
+        it('should get the doctor of a specific cita', (done) => {
+        supertest(app)
+            .get('/citas/5bffc5c4c4a6ef17e6a9a5e2/doctor')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+    //Comprueba que efectivamente se devuelven los citas en /citas
+    describe('GET /citas:id/paciente', () => {
+        it('should get the patient of a specific cita', (done) => {
+        supertest(app)
+            .get('/citas/5bffc5c4c4a6ef17e6a9a5e2/paciente')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
+        });
+
+    });
+
+
+
+});
+
+describe('PUT method tests', () => {
+
+    describe('PUT (Cita)', () => {
+        it('should add a new cita', (done) => {
+            
+                let data = {
+                    "paciente": 987654321,
+                    "date": "2010-5-5",
+                    "doctor": 21534680,
+                    "hora": 9,
+                    "sala": 2
+                }
+            supertest(app)
+            .put('/citas')
+            .send(data)
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+
+
+    describe('PUT (Paciente)', () => {
+        it('should add a new patient', (done) => {
+            
+                let data = {
+                    "nombre": "PRUEBA",
+                    "apellido": "TEST",
+                    "DNI": 000000000
+                }
+            supertest(app)
+            .put('/pacientes')
+            .send(data)
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+    describe('PUT (Doctor)', () => {
+        it('should add a new doctor', (done) => {
+            
+                let data = {
+                    "nombre": "PRUEBA",
+                    "apellido": "TEST",
+                    "DNI": 000000000,
+                    "especialidad":"PRUEBA"
+                }
+            supertest(app)
+            .put('/doctores')
+            .send(data)
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+
+});
+
+
+
+
+describe('POST method tests', () => {
+
+    describe('POST (Cita)', () => {
+        it('should modify the new cita', (done) => {
+            
+            supertest(app)
+            .post('/citas')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+
+
+    describe('POST (Paciente)', () => {
+        it('should motdify the new patient', (done) => {
+            
+
+            supertest(app)
+            .post('/pacientes')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+    describe('POST (Doctor)', () => {
+        it('should modify the new doctor', (done) => {
+            
+              
+            supertest(app)
+            .post('/doctores')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+
+});
+
+
+
+describe('DELETE method tests', () => {
+
+    describe('DELETE (Cita)', () => {
+        it('should delete the new cita', (done) => {
+            
+            supertest(app)
+            .delete('/citas')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+
+
+    describe('DELETE (Paciente)', () => {
+        it('should delete the new patient', (done) => {
+            supertest(app)
+            .delete('/pacientes')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
+
+    describe('DELETE (Doctor)', () => {
+        it('should delete the new patient', (done) => {
+            
+    
+            supertest(app)
+            .delete('/doctores')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err) => {
+                if (err) return done(err);
+                done();
+            });
+        });
+
+    });
 
 
 });
