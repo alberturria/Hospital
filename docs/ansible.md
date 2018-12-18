@@ -38,3 +38,7 @@ A partir de aquí se comienzan con las tareas:
 - Instalar forever
     Forever es un paquete de npm que nos permite correr la aplicación sin límites.
     Pese a que se puede lanzar la aplicación de manera usual (`npm start`) he optado por lanzarla con forever para que el aprovisionamiento tenga fin (de la otra manera la consola no retorna del aprovisionamiento).
+
+- Copiar archivo de credenciales para conectar a la Base de Datos
+    Se envía del host el archivo `clave.txt` a la máquina virtual. Este archivo se usará para establecer la variable de entorno necesaria para conectar el servicio a la base de datos.
+    De este modo no se vev comprometida información sensible en ningún momento.
