@@ -10,15 +10,13 @@ Vagrant.configure('2') do |config|
 
   config.vm.provider :azure do |az, override|
     # Información general de los servicios de Azure 
-    az.tenant_id = '612b34bc-05a2-4fab-a748-25a3dfb14db7'
-    az.client_id = '459e8de2-5701-4fb4-a396-aa0ab68b505d'
-    az.client_secret = 'c120ea33-e315-487b-a4d3-c0d0eaead7cb'
-    az.subscription_id = 'bee7cc74-a15e-47a0-9e21-f5993d87aef4'
-
+    az.tenant_id = ENV['AZURE_TENANT_ID']
+    az.client_id = ENV['AZURE_CLIENT_ID']
+    az.client_secret = ENV['AZURE_CLIENT_SECRET']
+    az.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
     # Parámetros de la vm
     az.vm_name = 'maquinavagrant'
     az.vm_size = 'Standard_A0'
-    az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
     az.resource_group_name = 'NuevosRecursos'
     az.location = 'westeurope'
     az.tcp_endpoints = 80
