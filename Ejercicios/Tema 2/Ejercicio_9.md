@@ -8,7 +8,7 @@ Se ha sincronizado Travis para que cada vez que se realice un push a la rama mas
 
 Se puede apreciar en esta imagen:
 
-![Ejercicio9](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/3ejercicio9.png)
+![Ejercicio9](./../../docs/assets/img/3ejercicio9.png)
 
 Esta configuración se ha realizado en un fichero [.travis.yml](https://github.com/alberturria/Hospital/blob/master/.travis.yml)
 En la que se le indica el lenguaje del proyecto así como los servicios que utiliza.

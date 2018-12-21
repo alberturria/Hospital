@@ -13,7 +13,7 @@ En [este fichero](https://github.com/alberturria/Hospital/blob/master/routes/cit
 
 En [esta dirección](https://hospitaliv.herokuapp.com/) se pueden comprobar las rutas mencionadas.
 
-![Ejercicio4](https://github.com/alberturria/Hospital/tree/master/docs/assets/img.png)
+![Ejercicio4](./../../docs/assets/img.png)
 
 
 

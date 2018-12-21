@@ -4,7 +4,7 @@ Consultar en el catálogo de alguna tienda de informática el precio de un orden
 ### Solución
 
 Hemos decidido comprar el siguiente servidor por valor de 649€. 
-![Servidor](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/servidor.png)
+![Servidor](./../../docs/assets/img/servidor.png)
 
 Suponiendo que la compra se realiza a comienzo de año, y teniendo en cuenta que podemos imputar un 25% del valor del mismo sin IVA, el amortizaje a 4 años sería:
 

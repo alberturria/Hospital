@@ -6,4 +6,4 @@ Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarro
 
 Se ha instalado usando el comando `sudo apt install lxc`
 
-![Ejercicio1](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/4ejercicio1.png)
+![Ejercicio1](./../../docs/assets/4ejercicio1.png)

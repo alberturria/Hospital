@@ -7,13 +7,13 @@
 
 1. Solución primera parte.
 
-![Ejercicio4](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/ejercicio4.png)
+![Ejercicio4](./../../docs/assets/img/ejercicio4.png)
 
 Lanzando ambos comandos podemos comprobar en primer lugar que mi ordenador tiene instalado el módulo de virtualización del kernel, y que la virtualización de mi ordenador se basa en la tecnología VT-x.
 
 2. Solución segunda parte.
 
-![Ejercicio4](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/ejercicio4_2.png)
+![Ejercicio4](./../../docs/assets/img/ejercicio4_2.png)
 
 En mi caso no he instalado ninguno ya que ya tenía instalado OracleVirtualBox. 
 Es un hipervisor de tipo 2, ya que se ejecuta sobre un Sistema Operativo.

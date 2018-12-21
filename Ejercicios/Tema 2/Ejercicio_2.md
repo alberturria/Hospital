@@ -34,7 +34,7 @@ Sin embargo la siguiente:
 
 No los pasa.
 
-![Ejercicio2.1](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/3ejercicio2.png)
+![Ejercicio2.1](./../../docs/assets/img/3ejercicio2.png)
 
 Corregimos por:
 
@@ -53,5 +53,5 @@ Corregimos por:
 
 Y sí los pasa.
 
-![Ejercicio2.2](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/3ejercicio2_2.png)
+![Ejercicio2.2](./../../docs/assets/img/3ejercicio2_2.png)
 

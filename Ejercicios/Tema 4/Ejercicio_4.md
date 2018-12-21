@@ -11,4 +11,4 @@ Se ha instalado una imagen tanto de Ubuntu como de MongoDB, con el comando: `sud
 
 Aquí se puede ver los comandos ejecutados:
 
-![Ejercicio4](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/4ejercicio4.png)
+![Ejercicio4](./../../docs/assets/img/4ejercicio4.png)

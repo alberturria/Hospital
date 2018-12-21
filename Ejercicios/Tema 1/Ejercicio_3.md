@@ -7,6 +7,6 @@ En mi caso tan sólo he podido comprobar qué flags tiene mi ordenador portátil
 
 Esta ha sido la salida de dicho comando:
 
-![Ejercicio3](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/ejercicio3.png)
+![Ejercicio3](./../../docs/assets/img/ejercicio3.png)
 
 Se puede apreciar que tan solo se tiene constancia del flag `vmx` que hace referencia a que mi ordenador de procesador Intel soporta la tecnología de virtualización VT-x.

@@ -9,4 +9,4 @@ El fichero de tests es [este](https://github.com/alberturria/Hospital/blob/maste
 
 Y esta es la ejecución de dichos tests.
 
-![Ejercicio3](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/3ejercicio2_2.png)
+![Ejercicio3](./../../docs/assets/img/3ejercicio2_2.png)

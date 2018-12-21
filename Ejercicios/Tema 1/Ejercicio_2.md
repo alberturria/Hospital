@@ -5,12 +5,12 @@ Usando las tablas de precios de servicios de alojamiento en Internet “clásico
 
 Como empresa que ofrezcan servidores físicos hemos escogido [VPSServers](https://www.vpsserver.com/plans/)
 
-![VPSServers](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/vpsservers.png)
+![VPSServers](./../../docs/assets/img/vpsservers.png)
 
 
 Y como empresa que ofrece servicios en la nube nos hemos decantado por [Google Cloud Services](https://cloud.google.com/)
 
-![GoogleCloud](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/googlecloud.png)
+![GoogleCloud](./../../docs/assets/img/googlecloud.png)
 
 
 Hemos escogido la opción de VPSServers de 1 GB de memoria, procesador de 1 core, 25 GB de almacenamiento y 1000 GB de transferencia. (4'99€ al mes)

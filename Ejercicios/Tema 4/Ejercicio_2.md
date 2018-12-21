@@ -8,6 +8,6 @@ Hemos creado y lanzado contenedores de Ubuntu y Gentoo.
 
 Aquí se puede ver el proceso realizado en el caso del contenedor de Ubuntu.
 
-![Ejercicio2_1](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/4ejercicio2.png)
+![Ejercicio2_1](./../../docs/assets/img/4ejercicio2.png)
 
-![Ejercicio2_2](https://github.com/alberturria/Hospital/tree/master/docs/assets/img/4ejercicio2_2.png)
+![Ejercicio2_2](./../../docs/assets/img/4ejercicio2_2.png)
