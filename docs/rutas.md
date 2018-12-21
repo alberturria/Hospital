@@ -29,3 +29,24 @@ En esta ruta se podrá ver cuáles son las citas de las que se tiene constancia 
 De cada cita se podrá saber el DNI del paciente que se atiende, el DNI del doctor que realiza la consulta, la fecha, la hora y la sala donde tendrá lugar la cita.
 
 ![Ruta /citas](/assets/img/citas.png)
+
+## /citas/:id
+
+En esta ruta se puede ver una ruta específica, siempre que se le pase el `_id` de la misma.
+
+![Ruta /citas/:id](/assets/img/citaid.png)
+
+
+## /citas/:id/doctor
+
+En esta ruta se puede ver la información asociada al doctor de una determinada cita.
+
+![Ruta /citas/:id/doctor](/assets/img/citaiddoctor.png)
+
+
+## /citas/:id/paciente
+
+En esta ruta se puede ver la información asociada al paciente de una determinada cita.
+
+
+![Ruta /citas/:id/paciente](/assets/img/citaidpaciente.png)
