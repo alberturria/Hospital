@@ -8,7 +8,7 @@ o bien `cd despliegue/ ; fly staging` desde el directorio principal de nuestro r
 
 ## Explicación del fichero flightplan usado
 
-Inspirándonos en el [Github de flightplan.js](https://github.com/pstadler/flightplan) podemos ver que el fichero debe de comenzar con un `require` de la dependencia `flightplan`.
+Viendo la documentación de [flightplan](https://www.npmjs.com/package/flightplan) hemos hecho este flightplan file.
 
 A continuación se define la configuración. Para `staging` (puesta en escena) definimos:
 - `host`: `maquinavagrant.westeurope.cloudapp.azure.com` que lo podemos deducir debido al nombre dado a la máquina virtual en el [Vagrantfile](https://github.com/alberturria/Hospital/blob/master/Vagrantfile) y a la localización dada en el mismo. (De todas formas es posible mirarlo desde la consola de Azure).
@@ -18,7 +18,6 @@ A continuación se define la configuración. Para `staging` (puesta en escena) d
 - `agent`: `process.env.SSH_AUTH_SOCK` Indica que se enviará dicho socket para permitir la conexión.
 
 A continuación se especifican los comandos que se ejecutarán en la máquina virtual con `plan.remote`.
-Gracias a `remote.with('cd /opt/Hospital/, function() {'` decidimos dónde se ejecutarán los siguientes comandos:
 - `remote.exec('sudo npm install --production');` Para instalar las dependencias (exceptuando las 'devDenpendencies') de nuestro proyecto a través de nuestro gestor de paquetes de node `npm`.
 - `remote.exec('sudo forever start index.js');` Para lanzar la aplicación con `forever` para que no se ejecute de manera indefinida. Es cierto que NO se ejecuta `npm start` como bien se hace en [Procfile](https://github.com/alberturria/Hospital/blob/master/Procfile) y [Dockerfile](https://github.com/alberturria/Hospital/blob/master/Dockerfile), pero creo conveniente la ejecución a través de `forever` para permitir una ejecución ilimitada. (Como también se explica en la documentación del [aprovisionamiento](https://alberturria.github.io/Hospital/ansible.html)).
 
