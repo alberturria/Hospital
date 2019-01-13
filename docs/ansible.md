@@ -9,6 +9,11 @@ Siempre podremos volver a aprovisionar nuestra máquina virtual escribiendo `vag
 
 ## Explicación del fichero de aprovisionamiento
 
+La realización de este Vagrantfile ha sido realizada tras la previa revisión de información de los siguientes enlaces (entre otros):
+- [Working with Playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
+- [Try the lastest stable version of npm](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
+- [Forever npm](https://www.npmjs.com/package/forever)
+
 Como se puede observar, nuestro fichero está dividido en tareas, `tasks` , cada una de ellas recibe un nombre y lleva a cabo una acción.
 La opción `become` indica que el comando se debe de ejecutar como superusuario.
 La opción `command` indica los comandos que se deben de ejecutar para cumplir dicha tarea.
@@ -20,14 +25,8 @@ A partir de aquí se comienzan con las tareas:
 - Actualizar paquetes del sistema.
     Siempre es recomendable al iniciar por primera vez un sistema operativo actualizar los paquetes, para que, en caso de que se utilice alguno, se use la última versión.
 
-- Instalar nodejs-legacy
-    Debemos de instalarlo puesto que nuestra aplicación ha sido desarrollada en node, y para lanzarla lo necesitaremos.
-
 - Instalar npm
     Debemos de instalar el gestor de paquetes de node para instalar dependencias
-
-- Clonar el repositorio
-    Se obtienen los fuentes de nuestra aplicación descargando el repositorio indicado en `repo`. Será descargado en `dest`.
 
 - Actualizar node a la última versión
     A base de prueba y error he visto necesario actualizar node a la última versión puesto que si no se hace es imposible lanzar la aplicación.
@@ -39,6 +38,3 @@ A partir de aquí se comienzan con las tareas:
     Forever es un paquete de npm que nos permite correr la aplicación sin límites.
     Pese a que se puede lanzar la aplicación de manera usual (`npm start`) he optado por lanzarla con forever para que el aprovisionamiento tenga fin (de la otra manera la consola no retorna del aprovisionamiento).
 
-- Copiar archivo de credenciales para conectar a la Base de Datos
-    Se envía del host el archivo `clave.txt` a la máquina virtual. Este archivo se usará para establecer la variable de entorno necesaria para conectar el servicio a la base de datos.
-    De este modo no se vev comprometida información sensible en ningún momento.
