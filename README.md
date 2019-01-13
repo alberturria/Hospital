@@ -66,7 +66,7 @@ Para más información sobre contenedores vaya a [esta página](https://albertur
 
 ### Desde una máquina virtual
 
-Despliegue final: 40.68.63.95
+Despliegue final: 104.210.60.91
 
 Finalmente hemos realizado un despliegue de una máquina virtual usando los servicios de Azure.
 Esta máquina ha sido configurada gracias al [Vagrantfile](https://github.com/alberturria/Hospital/blob/master/Vagrantfile), aprovisionada gracias al [playbook.yml](https://github.com/alberturria/Hospital/blob/master/provision/playbook.yml) y desplegada gracias al [flightplan.js](https://github.com/alberturria/Hospital/blob/master/despliegue/flightplan.js)
